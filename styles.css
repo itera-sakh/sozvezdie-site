@@ -235,8 +235,8 @@ section{padding:74px 0;scroll-margin-top:calc(var(--header-h) + 12px)}
 .contact-link:hover{transform:translateX(6px);box-shadow:var(--shadow);background:var(--cream)}
 .contact-ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;flex:none}
 .contact-ico svg{width:23px;height:23px}
-.contact-link b{display:block;font-size:16px;color:var(--ink)}
-.contact-link small{color:var(--ink-soft);font-size:13.5px}
+.contact-link b{display:block;font-size:16px;color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
+.contact-link small{color:var(--ink-soft);font-size:13.5px;font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;letter-spacing:0}
 .map-card{border-radius:28px;overflow:hidden;box-shadow:var(--shadow-lg);position:relative}
 .map-card img{width:100%;height:300px;object-fit:cover}
 .map-body{background:var(--surface);padding:30px}
