@@ -118,7 +118,7 @@ section{padding:74px 0;scroll-margin-top:calc(var(--header-h) + 12px)}
 
 /* ---------- Hero ---------- */
 .hero{
-  position:relative;min-height:92svh;display:flex;align-items:flex-end;
+  position:relative;min-height:100svh;display:flex;align-items:flex-end;
   padding:0;color:#fff;overflow:hidden;
 }
 .hero-bg{position:absolute;inset:0}
@@ -140,7 +140,28 @@ section{padding:74px 0;scroll-margin-top:calc(var(--header-h) + 12px)}
   text-shadow:0 4px 30px rgba(0,0,0,.35);
 }
 .hero p{font-size:clamp(16px,2vw,20px);max-width:560px;color:rgba(255,255,255,.92);margin-bottom:34px;text-shadow:0 2px 14px rgba(0,0,0,.4)}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-rating{
+  display:inline-flex;align-items:center;gap:8px;margin-bottom:26px;padding:10px 20px;
+  border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);
+  backdrop-filter:blur(8px);color:#fff;font-size:15px;transition:transform .2s ease,background .2s ease;
+}
+.hero-rating:hover{background:rgba(255,255,255,.26);transform:translateY(-2px);color:#fff}
+.hero-rating b{font-weight:700}
+.hero-stars{display:inline-flex;gap:2px}
+.hero-stars svg{width:15px;height:15px;fill:#FFD9A0}
+.hero-rating-src{font-weight:700;color:#FFD9A0}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+
+.contact-rating{
+  display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;padding:10px 18px;
+  border-radius:14px;background:var(--cream);color:var(--ink);font-size:14px;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.contact-rating:hover{transform:translateY(-2px);box-shadow:var(--shadow);color:var(--ink)}
+.contact-rating b{color:var(--terra-dark)}
+.contact-stars{display:inline-flex;gap:2px}
+.contact-stars svg{width:14px;height:14px;fill:var(--bronze)}
+.contact-rating-check{color:#2E9E5B;font-weight:700}
 .scroll-hint{
   position:absolute;right:40px;bottom:36px;z-index:3;display:flex;flex-direction:column;
   align-items:center;gap:10px;color:rgba(255,255,255,.8);font-size:11px;letter-spacing:.22em;
