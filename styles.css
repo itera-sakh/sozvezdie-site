@@ -16,11 +16,11 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;background:var(--bg)}
 body{
-  font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family:"JetBrains Mono","Cascadia Mono","Segoe UI",monospace;
   background:var(--bg);color:var(--ink);line-height:1.65;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
 }
-h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:600;line-height:1.2;color:var(--ink)}
+h1,h2,h3,.serif{font-family:"JetBrains Mono","Cascadia Mono",monospace;font-weight:700;line-height:1.25;color:var(--ink);letter-spacing:-.01em}
 img{display:block;max-width:100%}
 a{color:var(--terra);text-decoration:none}
 a:hover{color:var(--terra-dark)}
@@ -70,6 +70,7 @@ section{padding:96px 0;scroll-margin-top:calc(var(--header-h) + 12px)}
 .logo:hover{color:#fff}
 .logo-star{width:38px;height:38px;border-radius:12px;background:rgba(255,255,255,.16);display:grid;place-items:center;backdrop-filter:blur(6px);transition:background .3s}
 .logo-star svg{width:28px;height:28px;flex:none}
+.logo-star img{width:30px;height:30px;border-radius:8px;display:block}
 .header.scrolled .logo{color:var(--ink)}
 .header.scrolled .logo:hover{color:var(--terra-dark)}
 .header.scrolled .logo-star{background:var(--cream)}
@@ -133,7 +134,7 @@ section{padding:96px 0;scroll-margin-top:calc(var(--header-h) + 12px)}
   background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);
   backdrop-filter:blur(8px);font-size:14px;font-weight:600;margin-bottom:22px;
 }
-.hero-badge svg{width:15px;height:15px;fill:#FFD9A0}
+.hero-badge img{width:20px;height:20px;border-radius:50%;background:#fff;flex:none}
 .hero h1{
   font-size:clamp(38px,6.4vw,74px);color:#fff;max-width:15ch;margin-bottom:18px;
   text-shadow:0 4px 30px rgba(0,0,0,.35);
@@ -246,6 +247,7 @@ footer{background:#33291F;color:rgba(245,238,226,.75);padding:44px 0;margin-top:
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 footer .serif{color:#F5EEE2;font-size:19px}
 footer small{font-size:13.5px}
+.footer-bear{width:24px;height:24px;border-radius:7px;background:#fff;vertical-align:-6px;margin-right:4px}
 footer a{color:rgba(245,238,226,.85)}
 footer a:hover{color:#FFD9A0}
 
