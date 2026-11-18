@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>База отдыха «Созвездие» — A-frame дом с баней недалеко от Южно-Сахалинска</title>
-<meta name="description" content="Уединённый A-frame дом без соседей и посторонних глаз: горячий чан, баня-бочка, можно с животными. Отдых круглый год недалеко от Южно-Сахалинска. Бронирование в WhatsApp и Telegram.">
-<meta property="og:title" content="База отдыха «Созвездие»">
-<meta property="og:description" content="Уединённый A-frame дом, горячий чан и баня-бочка недалеко от Южно-Сахалинска.">
-<meta property="og:image" content="images/aframe-evening.jpg">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 64'><rect width='72' height='64' rx='14' fill='%2333291F'/><g fill='%23FFD9A0'><ellipse cx="28" cy="32" rx="20" ry="14"/><circle cx="38" cy="24" r="9"/><circle cx="50" cy="24" r="11"/><ellipse cx="59" cy="28" rx="6" ry="5"/><circle cx="45" cy="13" r="4.5"/><circle cx="8" cy="30" r="3"/><path d="M14 42 L10 52 Q9.4 54.5 12 54.5 L16 54.5 Q18.2 54.5 18.4 52.5 L20.5 42 Z"/><path d="M24 43 L24 52 Q24 54.2 26.5 54.2 L29 54.2 Q31.2 54.2 31.2 52 L31.4 43 Z"/><path d="M36 43 L36 52 Q36 54.2 38.5 54.2 L41 54.2 Q43.2 54.2 43.2 52 L43.4 43 Z"/><path d="M45 40 L53.5 48.5 Q56.2 51 53.8 52.4 L50.5 54 Q48 55 46.8 52.8 L41.5 44 Z"/></g><path d='M26 26 L22 33 L30 35 L34 29 L39 26 L42 23 L46 20 M34 29 L26 26' fill='none' stroke='%23FAF6EF' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/><g fill="%23FAF6EF"><circle cx="26" cy="26" r="2"/><circle cx="22" cy="33" r="1.8"/><circle cx="30" cy="35" r="1.8"/><circle cx="34" cy="29" r="1.8"/><circle cx="39" cy="26" r="1.7"/><circle cx="42" cy="23" r="1.6"/><circle cx="46" cy="20" r="1.9"/></g></svg>">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>База отдыха «Созвездие» — A-frame дом с баней недалеко от Южно-Сахалинска</title>
+  <meta name="description"
+        content="Уединённый A-frame дом без соседей и посторонних глаз: горячий чан, баня-бочка, можно с животными. Отдых круглый год недалеко от Южно-Сахалинска. Бронирование в WhatsApp и Telegram.">
+  <meta property="og:title" content="База отдыха «Созвездие»">
+  <meta property="og:description"
+        content="Уединённый A-frame дом, горячий чан и баня-бочка недалеко от Южно-Сахалинска.">
+  <meta property="og:image" content="images/aframe-evening.jpg">
+  <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 64'><rect width='72' height='64' rx='14' fill='%2333291F'/><g fill='%23FFD9A0'><ellipse cx="
+        28
+  " cy="32" rx="20" ry="14"/>
+  <circle cx="38" cy="24" r="9"/>
+  <circle cx="50" cy="24" r="11"/>
+  <ellipse cx="59" cy="28" rx="6" ry="5"/>
+  <circle cx="45" cy="13" r="4.5"/>
+  <circle cx="8" cy="30" r="3"/>
+  <path d="M14 42 L10 52 Q9.4 54.5 12 54.5 L16 54.5 Q18.2 54.5 18.4 52.5 L20.5 42 Z"/>
+  <path d="M24 43 L24 52 Q24 54.2 26.5 54.2 L29 54.2 Q31.2 54.2 31.2 52 L31.4 43 Z"/>
+  <path d="M36 43 L36 52 Q36 54.2 38.5 54.2 L41 54.2 Q43.2 54.2 43.2 52 L43.4 43 Z"/>
+  <path d="M45 40 L53.5 48.5 Q56.2 51 53.8 52.4 L50.5 54 Q48 55 46.8 52.8 L41.5 44 Z"/>
+  </g>
+  <path d='M26 26 L22 33 L30 35 L34 29 L39 26 L42 23 L46 20 M34 29 L26 26' fill='none' stroke='%23FAF6EF'
+        stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/>
+  <g fill="%23FAF6EF">
+    <circle cx="26" cy="26" r="2"/>
+    <circle cx="22" cy="33" r="1.8"/>
+    <circle cx="30" cy="35" r="1.8"/>
+    <circle cx="34" cy="29" r="1.8"/>
+    <circle cx="39" cy="26" r="1.7"/>
+    <circle cx="42" cy="23" r="1.6"/>
+    <circle cx="46" cy="20" r="1.9"/>
+  </g>
+  </svg>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -17,7 +44,32 @@
 <header class="header" id="header">
   <div class="wrap">
     <a href="#hero" class="logo">
-      <span class="logo-star"><svg viewBox="0 0 72 64" aria-hidden="true"><defs><clipPath id="bearClip"><ellipse cx="28" cy="32" rx="20" ry="14"/><circle cx="38" cy="24" r="9"/><circle cx="50" cy="24" r="11"/><ellipse cx="59" cy="28" rx="6" ry="5"/><circle cx="45" cy="13" r="4.5"/><circle cx="8" cy="30" r="3"/><path d="M14 42 L10 52 Q9.4 54.5 12 54.5 L16 54.5 Q18.2 54.5 18.4 52.5 L20.5 42 Z"/><path d="M24 43 L24 52 Q24 54.2 26.5 54.2 L29 54.2 Q31.2 54.2 31.2 52 L31.4 43 Z"/><path d="M36 43 L36 52 Q36 54.2 38.5 54.2 L41 54.2 Q43.2 54.2 43.2 52 L43.4 43 Z"/><path d="M45 40 L53.5 48.5 Q56.2 51 53.8 52.4 L50.5 54 Q48 55 46.8 52.8 L41.5 44 Z"/></clipPath></defs><g style="fill:#FFD9A0"><ellipse cx="28" cy="32" rx="20" ry="14"/><circle cx="38" cy="24" r="9"/><circle cx="50" cy="24" r="11"/><ellipse cx="59" cy="28" rx="6" ry="5"/><circle cx="45" cy="13" r="4.5"/><circle cx="8" cy="30" r="3"/><path d="M14 42 L10 52 Q9.4 54.5 12 54.5 L16 54.5 Q18.2 54.5 18.4 52.5 L20.5 42 Z"/><path d="M24 43 L24 52 Q24 54.2 26.5 54.2 L29 54.2 Q31.2 54.2 31.2 52 L31.4 43 Z"/><path d="M36 43 L36 52 Q36 54.2 38.5 54.2 L41 54.2 Q43.2 54.2 43.2 52 L43.4 43 Z"/><path d="M45 40 L53.5 48.5 Q56.2 51 53.8 52.4 L50.5 54 Q48 55 46.8 52.8 L41.5 44 Z"/></g><g clip-path="url(#bearClip)"><path d="M26 26 L22 33 L30 35 L34 29 L39 26 L42 23 L46 20 M34 29 L26 26" style="fill:none;stroke:#33291F;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/><g fill="#33291F"><circle cx="26" cy="26" r="2"/><circle cx="22" cy="33" r="1.8"/><circle cx="30" cy="35" r="1.8"/><circle cx="34" cy="29" r="1.8"/><circle cx="39" cy="26" r="1.7"/><circle cx="42" cy="23" r="1.6"/><circle cx="46" cy="20" r="1.9"/></g></g></svg></span>
+      <span class="logo-star"><svg viewBox="0 0 72 64" aria-hidden="true"><defs><clipPath id="bearClip"><ellipse cx="28"
+                                                                                                                 cy="32"
+                                                                                                                 rx="20"
+                                                                                                                 ry="14"/><circle
+          cx="38" cy="24" r="9"/><circle cx="50" cy="24" r="11"/><ellipse cx="59" cy="28" rx="6" ry="5"/><circle cx="45"
+                                                                                                                 cy="13"
+                                                                                                                 r="4.5"/><circle
+          cx="8" cy="30" r="3"/><path d="M14 42 L10 52 Q9.4 54.5 12 54.5 L16 54.5 Q18.2 54.5 18.4 52.5 L20.5 42 Z"/><path
+          d="M24 43 L24 52 Q24 54.2 26.5 54.2 L29 54.2 Q31.2 54.2 31.2 52 L31.4 43 Z"/><path
+          d="M36 43 L36 52 Q36 54.2 38.5 54.2 L41 54.2 Q43.2 54.2 43.2 52 L43.4 43 Z"/><path
+          d="M45 40 L53.5 48.5 Q56.2 51 53.8 52.4 L50.5 54 Q48 55 46.8 52.8 L41.5 44 Z"/></clipPath></defs><g
+          style="fill:#FFD9A0"><ellipse cx="28" cy="32" rx="20" ry="14"/><circle cx="38" cy="24" r="9"/><circle cx="50"
+                                                                                                                cy="24"
+                                                                                                                r="11"/><ellipse
+          cx="59" cy="28" rx="6" ry="5"/><circle cx="45" cy="13" r="4.5"/><circle cx="8" cy="30" r="3"/><path
+          d="M14 42 L10 52 Q9.4 54.5 12 54.5 L16 54.5 Q18.2 54.5 18.4 52.5 L20.5 42 Z"/><path
+          d="M24 43 L24 52 Q24 54.2 26.5 54.2 L29 54.2 Q31.2 54.2 31.2 52 L31.4 43 Z"/><path
+          d="M36 43 L36 52 Q36 54.2 38.5 54.2 L41 54.2 Q43.2 54.2 43.2 52 L43.4 43 Z"/><path
+          d="M45 40 L53.5 48.5 Q56.2 51 53.8 52.4 L50.5 54 Q48 55 46.8 52.8 L41.5 44 Z"/></g><g
+          clip-path="url(#bearClip)"><path d="M26 26 L22 33 L30 35 L34 29 L39 26 L42 23 L46 20 M34 29 L26 26"
+                                           style="fill:none;stroke:#33291F;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"/><g
+          fill="#33291F"><circle cx="26" cy="26" r="2"/><circle cx="22" cy="33" r="1.8"/><circle cx="30" cy="35"
+                                                                                                 r="1.8"/><circle
+          cx="34" cy="29" r="1.8"/><circle cx="39" cy="26" r="1.7"/><circle cx="42" cy="23" r="1.6"/><circle cx="46"
+                                                                                                             cy="20"
+                                                                                                             r="1.9"/></g></g></svg></span>
       Созвездие
     </a>
     <nav class="nav" id="nav">
@@ -26,7 +78,8 @@
       <a href="#gallery">Галерея</a>
       <a href="#prices">Цены</a>
       <a href="#contacts">Контакты</a>
-      <a href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B4%D0%BE%D0%BC" class="nav-cta" target="_blank" rel="noopener">Забронировать</a>
+      <a href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B4%D0%BE%D0%BC"
+         class="nav-cta" target="_blank" rel="noopener">Забронировать</a>
     </nav>
     <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
   </div>
@@ -43,17 +96,25 @@
 
 <!-- ======================= HERO ======================= -->
 <section class="hero" id="hero">
-  <div class="hero-bg"><img src="images/aframe-evening.jpg" alt="A-frame дом базы отдыха «Созвездие» вечером в огнях гирлянд" fetchpriority="high"></div>
+  <div class="hero-bg"><img src="images/aframe-evening.jpg"
+                            alt="A-frame дом базы отдыха «Созвездие» вечером в огнях гирлянд" fetchpriority="high">
+  </div>
   <div class="hero-content wrap">
     <span class="hero-badge">
       <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.3l7.1-.7z"/></svg>
       Южно-Сахалинск · отдых круглый год
     </span>
     <h1>База отдыха «Созвездие»</h1>
-    <p>Уединённый A-frame дом без соседей и посторонних глаз. Горячий чан под открытым небом, баня-бочка, гирлянды и тишина — в двадцати минутах от города.</p>
+    <p>Уединённый A-frame дом без соседей и посторонних глаз. Горячий чан под открытым небом, баня-бочка, гирлянды и
+      тишина — в двадцати минутах от города.</p>
     <div class="hero-actions">
-      <a class="btn btn-terra" href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B4%D0%BE%D0%BC" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.1 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.8-5.1c-.5-.9-.8-1.8-.6-2.4.1-.5.8-1.4 1.3-1.4h.5c.2 0 .4 0 .6.4l.8 2c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4-.1.6.5.9 1.9 2.2 3.1 2.8.2.1.4.1.6-.1l.8-.9c.2-.2.4-.3.6-.2l1.9.9c.3.2.4.3.5.5 0 .2 0 .5-.1.9z"/></svg>
+      <a class="btn btn-terra"
+         href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B4%D0%BE%D0%BC"
+         target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+              d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.1 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.8-5.1c-.5-.9-.8-1.8-.6-2.4.1-.5.8-1.4 1.3-1.4h.5c.2 0 .4 0 .6.4l.8 2c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4-.1.6.5.9 1.9 2.2 3.1 2.8.2.1.4.1.6-.1l.8-.9c.2-.2.4-.3.6-.2l1.9.9c.3.2.4.3.5.5 0 .2 0 .5-.1.9z"/>
+        </svg>
         Забронировать
       </a>
       <a class="btn btn-ghost" href="#prices">Смотреть цены</a>
@@ -67,25 +128,49 @@
   <div class="wrap">
     <span class="kicker reveal">О базе</span>
     <h2 class="section-title reveal">Место, где город<br>остаётся позади</h2>
-    <p class="section-sub reveal">«Созвездие» — это один дом на всю территорию. Никаких соседей за стенкой, очередей к бане и чужих глаз: только вы, близкие и сахалинская природа за окном.</p>
+    <p class="section-sub reveal">«Созвездие» — это один дом на всю территорию. Никаких соседей за стенкой, очередей к
+      бане и чужих глаз: только вы, близкие и сахалинская природа за окном.</p>
     <div class="features">
       <div class="feature reveal">
-        <div class="feature-ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="feature-ico">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
         <h3>Полное уединение</h3>
         <p>Дом сдаётся целиком, одна компания на всю базу. Никаких посторонних — отдыхайте как дома.</p>
       </div>
       <div class="feature reveal">
-        <div class="feature-ico"><svg viewBox="0 0 24 24"><path d="M8 5c-2 0-3.5 1.6-3.5 3.5 0 2.5 2.5 4 4.5 5.5l1 2 1-2c2-1.5 4.5-3 4.5-5.5C15.5 6.6 14 5 12 5c-.8 0-1.5.3-2 1-.5-.7-1.2-1-2-1z"/><path d="M4 20h16"/></svg></div>
+        <div class="feature-ico">
+          <svg viewBox="0 0 24 24">
+            <path
+                d="M8 5c-2 0-3.5 1.6-3.5 3.5 0 2.5 2.5 4 4.5 5.5l1 2 1-2c2-1.5 4.5-3 4.5-5.5C15.5 6.6 14 5 12 5c-.8 0-1.5.3-2 1-.5-.7-1.2-1-2-1z"/>
+            <path d="M4 20h16"/>
+          </svg>
+        </div>
         <h3>Можно с животными</h3>
         <p>Приезжайте с четвероногими друзьями — им здесь рады так же, как и вам.</p>
       </div>
       <div class="feature reveal">
-        <div class="feature-ico"><svg viewBox="0 0 24 24"><path d="M12 3c1 3-2 4-2 7a4 4 0 0 0 8 0c0-1.5-.7-2.6-1.5-3.5-.4 1-1 1.5-1.5 1.5.5-2-.5-4-3-5z"/><path d="M5 14c-1.5 1.5-2 3-2 4a4 4 0 0 0 8 0c0-3-3-3-3-6"/><path d="M19 14c1.5 1.5 2 3 2 4a4 4 0 0 1-8 0"/></svg></div>
+        <div class="feature-ico">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3c1 3-2 4-2 7a4 4 0 0 0 8 0c0-1.5-.7-2.6-1.5-3.5-.4 1-1 1.5-1.5 1.5.5-2-.5-4-3-5z"/>
+            <path d="M5 14c-1.5 1.5-2 3-2 4a4 4 0 0 0 8 0c0-3-3-3-3-6"/>
+            <path d="M19 14c1.5 1.5 2 3 2 4a4 4 0 0 1-8 0"/>
+          </svg>
+        </div>
         <h3>Горячий чан и баня</h3>
         <p>Купель с елью и лепестками роз под открытым небом и ароматная баня-бочка на дровах.</p>
       </div>
       <div class="feature reveal">
-        <div class="feature-ico"><svg viewBox="0 0 24 24"><path d="M12 2v20M4 6l16 12M20 6L4 18M2 12h20" opacity=".0"/><circle cx="12" cy="12" r="4"/><path d="M12 4a8 8 0 0 1 8 8M12 4a8 8 0 0 0-8 8"/></svg></div>
+        <div class="feature-ico">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2v20M4 6l16 12M20 6L4 18M2 12h20" opacity=".0"/>
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 4a8 8 0 0 1 8 8M12 4a8 8 0 0 0-8 8"/>
+          </svg>
+        </div>
         <h3>Круглый год</h3>
         <p>Зимой — снег, гирлянды и горячий чан, летом — терраса, гамак и зелень. Красиво в любой сезон.</p>
       </div>
@@ -106,16 +191,49 @@
       </div>
       <div>
         <h3>A-frame «Созвездие»</h3>
-        <p class="house-desc">Треугольный дом с панорамными окнами от пола до потолка. Внутри — каменная стена с мхом, лофт-спальня под крышей и всё для медленного отдыха.</p>
+        <p class="house-desc">Треугольный дом с панорамными окнами от пола до потолка. Внутри — каменная стена с мхом,
+          лофт-спальня под крышей и всё для медленного отдыха.</p>
         <ul class="amenities">
-          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Гостиная с панорамным остеклением</li>
-          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Мансарда-спальня с двумя кроватями</li>
-          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Чайная зона и кухня</li>
-          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Санузел с LED-зеркалом</li>
-          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Подвесное кресло-гамак</li>
-          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Терраса с гирляндами и мангал</li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 12l5 5L20 6"/>
+            </svg>
+            Гостиная с панорамным остеклением
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 12l5 5L20 6"/>
+            </svg>
+            Мансарда-спальня с двумя кроватями
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 12l5 5L20 6"/>
+            </svg>
+            Чайная зона и кухня
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 12l5 5L20 6"/>
+            </svg>
+            Санузел с LED-зеркалом
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 12l5 5L20 6"/>
+            </svg>
+            Подвесное кресло-гамак
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 12l5 5L20 6"/>
+            </svg>
+            Терраса с гирляндами и мангал
+          </li>
         </ul>
-        <a class="btn btn-outline" href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20A-frame%20%C2%AB%D0%A1%D0%BE%D0%B7%D0%B2%D0%B5%D0%B7%D0%B4%D0%B8%D0%B5%C2%BB" target="_blank" rel="noopener">Узнать про A-frame</a>
+        <a class="btn btn-outline"
+           href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20A-frame%20%C2%AB%D0%A1%D0%BE%D0%B7%D0%B2%D0%B5%D0%B7%D0%B4%D0%B8%D0%B5%C2%BB"
+           target="_blank" rel="noopener">Узнать про A-frame</a>
       </div>
     </div>
 
@@ -126,16 +244,49 @@
       </div>
       <div>
         <h3>Баня-бочка</h3>
-        <p class="house-desc">Отдельная баня-бочка из кедра — быстро прогревается, долго держит жар. Париться под шум дождя или под звёздами — отдельный вид удовольствия.</p>
+        <p class="house-desc">Отдельная баня-бочка из кедра — быстро прогревается, долго держит жар. Париться под шум
+          дождя или под звёздами — отдельный вид удовольствия.</p>
         <ul class="amenities">
-          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Дровяная печь и парилка</li>
-          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Отдельная терраса с дровником</li>
-          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Купель с елью и лепестками роз</li>
-          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Обливное ведро</li>
-          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Простыни и веники</li>
-          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Входит в «Романтический вечер»</li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 12l5 5L20 6"/>
+            </svg>
+            Дровяная печь и парилка
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 12l5 5L20 6"/>
+            </svg>
+            Отдельная терраса с дровником
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 12l5 5L20 6"/>
+            </svg>
+            Купель с елью и лепестками роз
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 12l5 5L20 6"/>
+            </svg>
+            Обливное ведро
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 12l5 5L20 6"/>
+            </svg>
+            Простыни и веники
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 12l5 5L20 6"/>
+            </svg>
+            Входит в «Романтический вечер»
+          </li>
         </ul>
-        <a class="btn btn-outline" href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B1%D0%B0%D0%BD%D1%8F-%D0%B1%D0%BE%D1%87%D0%BA%D0%B0" target="_blank" rel="noopener">Узнать про баню</a>
+        <a class="btn btn-outline"
+           href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B1%D0%B0%D0%BD%D1%8F-%D0%B1%D0%BE%D1%87%D0%BA%D0%B0"
+           target="_blank" rel="noopener">Узнать про баню</a>
       </div>
     </div>
   </div>
@@ -148,22 +299,32 @@
     <h2 class="section-title reveal">«Созвездие» в любое<br>время суток и года</h2>
     <p class="section-sub reveal">Нажмите на фото, чтобы рассмотреть. Все кадры сняты на территории базы.</p>
     <div class="gallery reveal" id="galleryGrid">
-      <div class="gallery-item"><img src="images/winter-snowman.jpg" alt="Снеговик перед A-frame домом зимой" loading="lazy"></div>
-      <div class="gallery-item"><img src="images/interior-living.jpg" alt="Гостиная с каменной стеной" loading="lazy"></div>
-      <div class="gallery-item"><img src="images/sauna-wood.jpg" alt="Баня-бочка, дрова на террасе" loading="lazy"></div>
-      <div class="gallery-item"><img src="images/night-house.jpg" alt="Дом ночью сквозь перголу с гирляндами" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/winter-snowman.jpg" alt="Снеговик перед A-frame домом зимой"
+                                     loading="lazy"></div>
+      <div class="gallery-item"><img src="images/interior-living.jpg" alt="Гостиная с каменной стеной" loading="lazy">
+      </div>
+      <div class="gallery-item"><img src="images/sauna-wood.jpg" alt="Баня-бочка, дрова на террасе" loading="lazy">
+      </div>
+      <div class="gallery-item"><img src="images/night-house.jpg" alt="Дом ночью сквозь перголу с гирляндами"
+                                     loading="lazy"></div>
       <div class="gallery-item"><img src="images/interior-bedroom.jpg" alt="Спальня-мансарда" loading="lazy"></div>
       <div class="gallery-item"><img src="images/aframe-dusk.jpg" alt="Вечерний дом среди елей" loading="lazy"></div>
-      <div class="gallery-item"><img src="images/interior-hammock.jpg" alt="Гамак у панорамного окна" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/interior-hammock.jpg" alt="Гамак у панорамного окна" loading="lazy">
+      </div>
       <div class="gallery-item"><img src="images/sauna-side.jpg" alt="Баня-бочка сбоку" loading="lazy"></div>
-      <div class="gallery-item"><img src="images/aframe-winter-wide.jpg" alt="Зимний A-frame, общий вид" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/aframe-winter-wide.jpg" alt="Зимний A-frame, общий вид" loading="lazy">
+      </div>
       <div class="gallery-item"><img src="images/interior-tea.jpg" alt="Чайная зона" loading="lazy"></div>
-      <div class="gallery-item"><img src="images/night-pergola-wide.jpg" alt="Ночная аллея с перголой" loading="lazy"></div>
-      <div class="gallery-item"><img src="images/interior-bathroom.jpg" alt="Санузел с LED-зеркалом" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/night-pergola-wide.jpg" alt="Ночная аллея с перголой" loading="lazy">
+      </div>
+      <div class="gallery-item"><img src="images/interior-bathroom.jpg" alt="Санузел с LED-зеркалом" loading="lazy">
+      </div>
       <div class="gallery-item"><img src="images/aframe-day-side.jpg" alt="Дом днём, боковой вид" loading="lazy"></div>
       <div class="gallery-item"><img src="images/winter-pergola.jpg" alt="Пергола в снегу" loading="lazy"></div>
-      <div class="gallery-item"><img src="images/night-pergola-close.jpg" alt="Пергола с кленовыми листьями ночью" loading="lazy"></div>
-      <div class="gallery-item"><img src="images/aframe-winter-close.jpg" alt="Зимний дом крупным планом" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/night-pergola-close.jpg" alt="Пергола с кленовыми листьями ночью"
+                                     loading="lazy"></div>
+      <div class="gallery-item"><img src="images/aframe-winter-close.jpg" alt="Зимний дом крупным планом"
+                                     loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -180,29 +341,38 @@
         <div class="price-amount">7 000 ₽</div>
         <div class="price-note">воскресенье — четверг / сутки</div>
         <p>Весь дом для компании до четырёх человек. Пятница и суббота — 12 000 ₽.</p>
-        <a class="btn btn-terra" href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B4%D0%BE%D0%BC%20(%D0%B4%D0%BE%204%20%D0%B3%D0%BE%D1%81%D1%82%D0%B5%D0%B9)" target="_blank" rel="noopener">Забронировать</a>
+        <a class="btn btn-terra"
+           href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B4%D0%BE%D0%BC%20(%D0%B4%D0%BE%204%20%D0%B3%D0%BE%D1%81%D1%82%D0%B5%D0%B9)"
+           target="_blank" rel="noopener">Забронировать</a>
       </div>
       <div class="price-card reveal">
         <h3>От 6 гостей</h3>
         <div class="price-amount">9 000 ₽</div>
         <div class="price-note">воскресенье — четверг / сутки</div>
         <p>Просторный отдых для большой компании. Пятница и суббота — 12 000 ₽.</p>
-        <a class="btn btn-terra" href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B4%D0%BE%D0%BC%20(%D0%BE%D1%82%206%20%D0%B3%D0%BE%D1%81%D1%82%D0%B5%D0%B9)" target="_blank" rel="noopener">Забронировать</a>
+        <a class="btn btn-terra"
+           href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B4%D0%BE%D0%BC%20(%D0%BE%D1%82%206%20%D0%B3%D0%BE%D1%81%D1%82%D0%B5%D0%B9)"
+           target="_blank" rel="noopener">Забронировать</a>
       </div>
       <div class="price-card featured reveal">
         <span class="price-tag">Популярный выбор</span>
         <h3>Романтический вечер · Комплекс 1</h3>
         <div class="price-amount">11 900 ₽</div>
         <div class="price-note">заезд с 19:00 · 18+</div>
-        <p>Идеальное свидание: уютный дом, горячий чан с елью и лепестками роз и пикантный бокс для яркого вечера вдвоём.</p>
-        <a class="btn btn-terra" href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%C2%AB%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B2%D0%B5%D1%87%D0%B5%D1%80%C2%BB%2C%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%201" target="_blank" rel="noopener">Устроить вечер</a>
+        <p>Идеальное свидание: уютный дом, горячий чан с елью и лепестками роз и пикантный бокс для яркого вечера
+          вдвоём.</p>
+        <a class="btn btn-terra"
+           href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%C2%AB%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B2%D0%B5%D1%87%D0%B5%D1%80%C2%BB%2C%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%201"
+           target="_blank" rel="noopener">Устроить вечер</a>
       </div>
       <div class="price-card reveal">
         <h3>Романтический вечер · Комплекс 2</h3>
         <div class="price-amount">15 900 ₽</div>
         <div class="price-note">заезд с 19:00 · 18+</div>
         <p>Всё из Комплекса 1 плюс 5 роз, воздушные шары, фруктовая тарелка — для тех, кто любит впечатлять.</p>
-        <a class="btn btn-terra" href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%C2%AB%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B2%D0%B5%D1%87%D0%B5%D1%80%C2%BB%2C%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%202" target="_blank" rel="noopener">Устроить вечер</a>
+        <a class="btn btn-terra"
+           href="https://wa.me/79140890912?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%C2%AB%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B2%D0%B5%D1%87%D0%B5%D1%80%C2%BB%2C%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%202"
+           target="_blank" rel="noopener">Устроить вечер</a>
       </div>
     </div>
   </div>
@@ -219,23 +389,29 @@
         <p>Отвечаем быстро. Если все каналы заняты — звоните: <a href="tel:+79140890912"><b>+7 914 089-09-12</b></a></p>
         <div class="contact-list">
           <a class="contact-link" href="https://wa.me/79140890912" target="_blank" rel="noopener">
-            <span class="contact-ico" style="background:#E7F8EE"><svg viewBox="0 0 24 24" fill="#1FA855"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.1 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.8-5.1c-.5-.9-.8-1.8-.6-2.4.1-.5.8-1.4 1.3-1.4h.5c.2 0 .4 0 .6.4l.8 2c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4-.1.6.5.9 1.9 2.2 3.1 2.8.2.1.4.1.6-.1l.8-.9c.2-.2.4-.3.6-.2l1.9.9c.3.2.4.3.5.5 0 .2 0 .5-.1.9z"/></svg></span>
+            <span class="contact-ico" style="background:#E7F8EE"><svg viewBox="0 0 24 24" fill="#1FA855"><path
+                d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.1 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.8-5.1c-.5-.9-.8-1.8-.6-2.4.1-.5.8-1.4 1.3-1.4h.5c.2 0 .4 0 .6.4l.8 2c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4-.1.6.5.9 1.9 2.2 3.1 2.8.2.1.4.1.6-.1l.8-.9c.2-.2.4-.3.6-.2l1.9.9c.3.2.4.3.5.5 0 .2 0 .5-.1.9z"/></svg></span>
             <span><b>WhatsApp</b><small>+7 914 089-09-12 — самый быстрый способ</small></span>
           </a>
           <a class="contact-link" href="https://t.me/medvedevakv65" target="_blank" rel="noopener">
-            <span class="contact-ico" style="background:#E8F3FB"><svg viewBox="0 0 24 24" fill="#2AABEE"><path d="M21.9 4.6L19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.5 7c.4-.3-.1-.5-.6-.2L7.6 13.2 3.2 11.8c-1-.3-1-1 .2-1.4l17.2-6.6c.8-.3 1.5.2 1.3 1.2z"/></svg></span>
+            <span class="contact-ico" style="background:#E8F3FB"><svg viewBox="0 0 24 24" fill="#2AABEE"><path
+                d="M21.9 4.6L19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.5 7c.4-.3-.1-.5-.6-.2L7.6 13.2 3.2 11.8c-1-.3-1-1 .2-1.4l17.2-6.6c.8-.3 1.5.2 1.3 1.2z"/></svg></span>
             <span><b>Telegram</b><small>@medvedevakv65</small></span>
           </a>
-          <a class="contact-link" href="https://max.ru/u/f9LHodD0cOIOay5D2_WjP2wGaQhV9F6XQ75RrzxTbXfB9vQ26lTHo4aclWk" target="_blank" rel="noopener">
-            <span class="contact-ico" style="background:#F0EAFB"><svg viewBox="0 0 24 24" fill="#7B5CD6"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.9 6.9l-1.7 7.9c-.1.6-.5.7-1 .4l-2.5-1.9-1.2 1.2c-.1.1-.3.2-.5.2l.2-2.4 4.7-4.2c.2-.2 0-.3-.3-.2l-5.8 3.6-2.5-.8c-.5-.2-.5-.5.1-.7l9.9-3.8c.4-.2.8 0 .7.7z"/></svg></span>
+          <a class="contact-link" href="https://max.ru/u/f9LHodD0cOIOay5D2_WjP2wGaQhV9F6XQ75RrzxTbXfB9vQ26lTHo4aclWk"
+             target="_blank" rel="noopener">
+            <span class="contact-ico" style="background:#F0EAFB"><svg viewBox="0 0 24 24" fill="#7B5CD6"><path
+                d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm4.9 6.9l-1.7 7.9c-.1.6-.5.7-1 .4l-2.5-1.9-1.2 1.2c-.1.1-.3.2-.5.2l.2-2.4 4.7-4.2c.2-.2 0-.3-.3-.2l-5.8 3.6-2.5-.8c-.5-.2-.5-.5.1-.7l9.9-3.8c.4-.2.8 0 .7.7z"/></svg></span>
             <span><b>MAX</b><small>Написать в мессенджер MAX</small></span>
           </a>
           <a class="contact-link" href="https://instagram.com/sozvezdie_sakh/" target="_blank" rel="noopener">
-            <span class="contact-ico" style="background:#FBE9EF"><svg viewBox="0 0 24 24" fill="#D33169"><path d="M12 2c2.7 0 3 0 4.1.1 1.1 0 1.8.2 2.5.5.7.2 1.2.6 1.8 1.1.5.5.9 1.1 1.1 1.8.3.7.5 1.4.5 2.5.1 1.1.1 1.4.1 4.1s0 3-.1 4.1c0 1.1-.2 1.8-.5 2.5a5 5 0 0 1-2.9 2.9c-.7.3-1.4.5-2.5.5-1.1.1-1.4.1-4.1.1s-3 0-4.1-.1c-1.1 0-1.8-.2-2.5-.5a5 5 0 0 1-2.9-2.9c-.3-.7-.5-1.4-.5-2.5C2 15 2 14.7 2 12s0-3 .1-4.1c0-1.1.2-1.8.5-2.5.2-.7.6-1.2 1.1-1.8.5-.5 1.1-.9 1.8-1.1.7-.3 1.4-.5 2.5-.5C9 2 9.3 2 12 2zm0 3.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.5a1.4 1.4 0 1 1-2.9 0 1.4 1.4 0 0 1 2.9 0z"/></svg></span>
+            <span class="contact-ico" style="background:#FBE9EF"><svg viewBox="0 0 24 24" fill="#D33169"><path
+                d="M12 2c2.7 0 3 0 4.1.1 1.1 0 1.8.2 2.5.5.7.2 1.2.6 1.8 1.1.5.5.9 1.1 1.1 1.8.3.7.5 1.4.5 2.5.1 1.1.1 1.4.1 4.1s0 3-.1 4.1c0 1.1-.2 1.8-.5 2.5a5 5 0 0 1-2.9 2.9c-.7.3-1.4.5-2.5.5-1.1.1-1.4.1-4.1.1s-3 0-4.1-.1c-1.1 0-1.8-.2-2.5-.5a5 5 0 0 1-2.9-2.9c-.3-.7-.5-1.4-.5-2.5C2 15 2 14.7 2 12s0-3 .1-4.1c0-1.1.2-1.8.5-2.5.2-.7.6-1.2 1.1-1.8.5-.5 1.1-.9 1.8-1.1.7-.3 1.4-.5 2.5-.5C9 2 9.3 2 12 2zm0 3.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.5a1.4 1.4 0 1 1-2.9 0 1.4 1.4 0 0 1 2.9 0z"/></svg></span>
             <span><b>Instagram</b><small>@sozvezdie_sakh — свежие фото и Stories</small></span>
           </a>
           <a class="contact-link" href="https://telegram.me/a_frame_sozvezdie_medved" target="_blank" rel="noopener">
-            <span class="contact-ico" style="background:#E8F3FB"><svg viewBox="0 0 24 24" fill="#2AABEE"><path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm4.2 12.4l9.8-6.3c.3-.2.3-.6-.1-.7l-11-4.2c-.3-.1-.6.1-.6.4l-.6 9.8c0 .4.4.7.5 1zm1.9-3.1l5.7-4.5c.2-.1.4 0 .3.2l-4.7 4.3-.2 2.4c0 .2-.2.2-.3 0l-1.1-2c-.1-.2-.1-.3.3-.4z"/></svg></span>
+            <span class="contact-ico" style="background:#E8F3FB"><svg viewBox="0 0 24 24" fill="#2AABEE"><path
+                d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm4.2 12.4l9.8-6.3c.3-.2.3-.6-.1-.7l-11-4.2c-.3-.1-.6.1-.6.4l-.6 9.8c0 .4.4.7.5 1zm1.9-3.1l5.7-4.5c.2-.1.4 0 .3.2l-4.7 4.3-.2 2.4c0 .2-.2.2-.3 0l-1.1-2c-.1-.2-.1-.3.3-.4z"/></svg></span>
             <span><b>Наш канал в Telegram</b><small>Новости, свободные даты и акции</small></span>
           </a>
         </div>
@@ -245,8 +421,12 @@
         <div class="map-body">
           <h3>Как доехать</h3>
           <p>Недалеко от Южно-Сахалинска. Точную точку пришлём после бронирования — а пока постройте маршрут в 2ГИС.</p>
-          <a class="btn btn-terra" href="https://2gis.ru/yuzhnosakhalinsk/firm/70000001092439471" target="_blank" rel="noopener" style="width:100%">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 1 7 7c0 5.2-7 13-7 13S5 14.2 5 9a7 7 0 0 1 7-7zm0 9.5A2.5 2.5 0 1 0 12 6.5a2.5 2.5 0 0 0 0 5z"/></svg>
+          <a class="btn btn-terra" href="https://2gis.ru/yuzhnosakhalinsk/firm/70000001092439471" target="_blank"
+             rel="noopener" style="width:100%">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                  d="M12 2a7 7 0 0 1 7 7c0 5.2-7 13-7 13S5 14.2 5 9a7 7 0 0 1 7-7zm0 9.5A2.5 2.5 0 1 0 12 6.5a2.5 2.5 0 0 0 0 5z"/>
+            </svg>
             Построить маршрут в 2ГИС
           </a>
         </div>
@@ -258,22 +438,40 @@
 <footer>
   <div class="wrap">
     <span class="serif">✨ База отдыха «Созвездие»</span>
-    <small>A-frame дом и баня-бочка недалеко от Южно-Сахалинска · <a href="tel:+79140890912">+7 914 089-09-12</a></small>
+    <small>A-frame дом и баня-бочка недалеко от Южно-Сахалинска · <a href="tel:+79140890912">+7 914
+      089-09-12</a></small>
   </div>
 </footer>
 
 <a class="float-wa" href="https://wa.me/79140890912" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.1 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.8-5.1c-.5-.9-.8-1.8-.6-2.4.1-.5.8-1.4 1.3-1.4h.5c.2 0 .4 0 .6.4l.8 2c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4-.1.6.5.9 1.9 2.2 3.1 2.8.2.1.4.1.6-.1l.8-.9c.2-.2.4-.3.6-.2l1.9.9c.3.2.4.3.5.5 0 .2 0 .5-.1.9z"/></svg>
+  <svg viewBox="0 0 24 24">
+    <path
+        d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.1 13.9c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-5.8-5.1c-.5-.9-.8-1.8-.6-2.4.1-.5.8-1.4 1.3-1.4h.5c.2 0 .4 0 .6.4l.8 2c.1.2.1.4 0 .6l-.5.7c-.1.2-.2.4-.1.6.5.9 1.9 2.2 3.1 2.8.2.1.4.1.6-.1l.8-.9c.2-.2.4-.3.6-.2l1.9.9c.3.2.4.3.5.5 0 .2 0 .5-.1.9z"/>
+  </svg>
 </a>
 <button class="to-top" id="toTop" aria-label="Наверх">
-  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  <svg viewBox="0 0 24 24">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
 </button>
 
 <div class="lightbox" id="lightbox">
-  <button class="lb-btn lb-close" id="lbClose" aria-label="Закрыть"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Назад"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Закрыть">
+    <svg viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6L6 18"/>
+    </svg>
+  </button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Назад">
+    <svg viewBox="0 0 24 24">
+      <path d="M15 5l-7 7 7 7"/>
+    </svg>
+  </button>
   <img id="lbImg" src="" alt="">
-  <button class="lb-btn lb-next" id="lbNext" aria-label="Вперёд"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Вперёд">
+    <svg viewBox="0 0 24 24">
+      <path d="M9 5l7 7-7 7"/>
+    </svg>
+  </button>
   <div class="lb-count" id="lbCount"></div>
 </div>
 
