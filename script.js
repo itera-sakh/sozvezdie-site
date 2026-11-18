@@ -27,14 +27,18 @@
 
   /* --- Scroll-spy: подсветка активного раздела --- */
   var navLinks = document.querySelectorAll("#nav a[href^='#'], #mobileMenu a[href^='#']");
-  var sections = Array.prototype.map.call(navLinks, function(a){
-    return document.querySelector(a.getAttribute("href"));
-  });
+  var sectionIds = ["about", "houses", "gallery", "prices", "contacts"];
   function spy(){
     var pos = (window.scrollY || 0) + 120;
-    var current = 0;
-    sections.forEach(function(sec, i){ if (sec && sec.offsetTop <= pos) current = i; });
-    navLinks.forEach(function(a, i){ a.classList.toggle("active", i === current); });
+    var currentId = null;
+    sectionIds.forEach(function(id){
+      var s = document.getElementById(id);
+      if (s && s.offsetTop <= pos) currentId = id;
+    });
+    if (!currentId) currentId = "about";
+    navLinks.forEach(function(a){
+      a.classList.toggle("active", a.getAttribute("href") === "#" + currentId);
+    });
   }
   window.addEventListener("scroll", spy, {passive:true});
   spy();
