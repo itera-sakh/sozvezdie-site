@@ -23,6 +23,7 @@
     document.body.style.overflow = open ? "hidden" : "";
   });
   mobileMenu.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", closeMenu); });
+  document.getElementById("mmClose").addEventListener("click", closeMenu);
 
   /* --- Scroll-spy: подсветка активного раздела --- */
   var navLinks = document.querySelectorAll("#nav a[href^='#'], #mobileMenu a[href^='#']");

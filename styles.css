@@ -107,6 +107,13 @@ section{padding:96px 0;scroll-margin-top:calc(var(--header-h) + 12px)}
 }
 .mobile-menu a:hover,.mobile-menu a.active{color:var(--terra);padding-left:8px}
 .mobile-menu .mm-cta{color:var(--terra);font-weight:700}
+.mm-close{
+  position:absolute;top:20px;right:22px;width:46px;height:46px;border:none;border-radius:14px;
+  background:var(--cream);cursor:pointer;display:grid;place-items:center;transition:background .2s,transform .2s;
+}
+.mm-close svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:2.4;stroke-linecap:round}
+.mm-close:hover{background:var(--cream-2);transform:rotate(90deg)}
+.mm-close:hover svg{stroke:var(--terra)}
 
 /* ---------- Hero ---------- */
 .hero{
