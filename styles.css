@@ -334,6 +334,7 @@ footer a:hover{color:#FFD9A0}
   .hero-rating{font-size:13.5px;padding:9px 15px;gap:6px;margin-bottom:20px}
   .hero-stars svg{width:13px;height:13px}
   .contact-card{padding:30px 22px}
+  .map-frame{height:320px}
   .gallery{columns:2 150px;column-gap:10px}
   .gallery-item{margin-bottom:10px;border-radius:14px}
   .to-top{right:26px;bottom:94px}
