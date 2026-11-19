@@ -11,7 +11,8 @@
   --radius:22px;
   --shadow:0 10px 30px rgba(62,55,46,.10),0 2px 8px rgba(62,55,46,.06);
   --shadow-lg:0 24px 60px rgba(62,55,46,.16);
-  --header-h:76px;
+  --header-h:calc(76px + env(safe-area-inset-top,0px));
+  --safe-b:env(safe-area-inset-bottom,0px);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;background:var(--bg)}
@@ -58,7 +59,7 @@ section{padding:74px 0;scroll-margin-top:calc(var(--header-h) + 12px)}
 /* ---------- Шапка ---------- */
 .header{
   position:fixed;inset:0 0 auto 0;z-index:100;height:var(--header-h);
-  display:flex;align-items:center;
+  display:flex;align-items:center;padding-top:env(safe-area-inset-top,0px);
   transition:background .3s ease,box-shadow .3s ease,backdrop-filter .3s ease;
 }
 .header.scrolled{
@@ -118,7 +119,7 @@ section{padding:74px 0;scroll-margin-top:calc(var(--header-h) + 12px)}
 
 /* ---------- Hero ---------- */
 .hero{
-  position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  position:relative;min-height:100vh;min-height:100dvh;display:flex;align-items:flex-end;
   padding:0;color:#fff;overflow:hidden;
 }
 .hero-bg{position:absolute;inset:0}
@@ -153,6 +154,7 @@ section{padding:74px 0;scroll-margin-top:calc(var(--header-h) + 12px)}
 .hero-stars svg{width:15px;height:15px;fill:#FFD9A0}
 .hero-rating-src{font-weight:700;color:#FFD9A0}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-sub-short{display:none}
 
 .contact-rating{
   display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;padding:10px 18px;
@@ -288,14 +290,14 @@ footer a:hover{color:#FFD9A0}
 
 /* ---------- Плавающие кнопки ---------- */
 .float-wa{
-  position:fixed;right:22px;bottom:22px;z-index:110;width:56px;height:56px;border-radius:18px;
+  position:fixed;right:22px;bottom:calc(22px + var(--safe-b));z-index:110;width:56px;height:56px;border-radius:18px;
   display:block;box-shadow:0 10px 28px rgba(75,92,240,.45);
   transition:transform .2s ease,box-shadow .2s ease;
 }
 .float-wa:hover{transform:scale(1.08) translateY(-3px);box-shadow:0 16px 34px rgba(139,92,246,.5)}
 .float-wa img{width:56px;height:56px;border-radius:18px;display:block}
 .to-top{
-  position:fixed;right:26px;bottom:96px;z-index:110;width:48px;height:48px;border-radius:50%;
+  position:fixed;right:26px;bottom:calc(96px + var(--safe-b));z-index:110;width:48px;height:48px;border-radius:50%;
   border:none;cursor:pointer;background:var(--surface);color:var(--terra);box-shadow:var(--shadow-lg);
   display:grid;place-items:center;opacity:0;pointer-events:none;transform:translateY(12px);
   transition:opacity .3s,transform .3s;
@@ -331,7 +333,7 @@ footer a:hover{color:#FFD9A0}
   .contact-grid{grid-template-columns:1fr;gap:30px}
 }
 @media (max-width:760px){
-  :root{--header-h:64px}
+  :root{--header-h:calc(64px + env(safe-area-inset-top,0px))}
   .header.scrolled{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(250,246,239,.97)}
   section{padding:52px 0}
   .nav{display:none}
@@ -340,10 +342,23 @@ footer a:hover{color:#FFD9A0}
   .features{grid-template-columns:1fr;gap:16px}
   .price-grid{grid-template-columns:1fr;gap:26px}
   .amenities{grid-template-columns:1fr}
-  .hero-content{padding-bottom:90px;padding-top:calc(var(--header-h) + 24px)}
-  .scroll-hint{display:none}
-  .hero-rating{font-size:13.5px;padding:9px 15px;gap:6px;margin-bottom:20px}
+  .hero-content{
+    padding-top:calc(var(--header-h) + 12px);
+    padding-bottom:calc(100px + var(--safe-b));   /* чтобы кнопки не залезали под плавающий MAX */
+  }
+  .hero h1{margin-bottom:12px}
+  .hero-desc{display:none}                 /* длинный текст — только на десктопе */
+  .hero-sub-short{
+    display:block;font-size:15.5px;max-width:34ch;
+    color:rgba(255,255,255,.92);margin-bottom:22px;
+    text-shadow:0 2px 14px rgba(0,0,0,.4);
+  }
+  .hero-rating{font-size:13.5px;padding:9px 15px;gap:6px;margin-bottom:18px}
   .hero-stars svg{width:13px;height:13px}
+  .hero-actions{gap:10px}
+  .hero-actions .btn{flex:1;padding:13px 8px;font-size:15px}
+  .mm-close{top:calc(20px + env(safe-area-inset-top,0px))}
+  .scroll-hint{display:none}
   .contact-card{padding:30px 22px}
   .map-wrap{height:320px;overflow:hidden}
   /* Виджет 2ГИС рендерится как на экране 2× ширины и 3× высоты с ужатием
@@ -353,5 +368,5 @@ footer a:hover{color:#FFD9A0}
   .map-frame{width:200%;height:960px;transform:scale(.5);transform-origin:0 0}
   .gallery{columns:2 150px;column-gap:10px}
   .gallery-item{margin-bottom:10px;border-radius:14px}
-  .to-top{right:26px;bottom:94px}
+  .to-top{right:26px;bottom:calc(94px + var(--safe-b))}
 }

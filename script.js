@@ -147,9 +147,9 @@
       var small = W < 760;
       var ox, oy, bw, bh;
       if (small){
-        bw = W * 0.66; bh = bw / 1.85;
-        ox = W - bw - W * 0.04;
-        oy = H * 0.09;
+        bw = W * 0.43; bh = bw / 1.85;
+        ox = W - bw - W * 0.02;
+        oy = Math.max(112, H * 0.13);   // ниже чёлки и шапки, выше городской плашки
       } else {
         bw = W * 0.34; bh = Math.min(H * 0.40, bw / 1.85);
         ox = W - bw - W * 0.035;
