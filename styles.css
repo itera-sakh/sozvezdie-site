@@ -271,6 +271,7 @@ section{padding:74px 0;scroll-margin-top:calc(var(--header-h) + 12px)}
 .contact-link b{display:block;font-size:16px;color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
 .contact-link small{color:var(--ink-soft);font-size:13.5px;font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;letter-spacing:0}
 .map-card{border-radius:28px;overflow:hidden;box-shadow:var(--shadow-lg);position:relative}
+.map-wrap{position:relative}
 .map-frame{display:block;width:100%;height:420px;border:0}
 .map-body{background:var(--surface);padding:30px}
 .map-body h3{font-size:21px;margin-bottom:6px}
@@ -344,7 +345,12 @@ footer a:hover{color:#FFD9A0}
   .hero-rating{font-size:13.5px;padding:9px 15px;gap:6px;margin-bottom:20px}
   .hero-stars svg{width:13px;height:13px}
   .contact-card{padding:30px 22px}
-  .map-frame{height:320px}
+  .map-wrap{height:320px;overflow:hidden}
+  /* Виджет 2ГИС рендерится как на экране 2× ширины и 3× высоты с ужатием
+     scale(.5): его плашка с карточкой организации влезает целиком (на узком
+     экране обрезалась справа и не масштабировалась), а точка на карте
+     опускается ниже, чтобы карточке хватило места расти вверх */
+  .map-frame{width:200%;height:960px;transform:scale(.5);transform-origin:0 0}
   .gallery{columns:2 150px;column-gap:10px}
   .gallery-item{margin-bottom:10px;border-radius:14px}
   .to-top{right:26px;bottom:94px}
