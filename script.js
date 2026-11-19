@@ -87,4 +87,191 @@
     if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
     touchX = null;
   }, {passive:true});
+
+  /* --- Созвездие: ночное небо в hero ---
+     Один кадрированный момент: тёплые звёзды + Большая Медведица (медведь из логотипа).
+     Лёгкость: ~90 точек, DPR <= 1.5, свечение через кэш-спрайт, rAF паузится
+     вне экрана и на скрытой вкладке, reduced-motion -> один статичный кадр. */
+  var canvas = document.getElementById("stars");
+  if (canvas && canvas.getContext){
+    var ctx = canvas.getContext("2d");
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var coarse = window.matchMedia("(pointer: coarse)").matches;
+    var DPR = Math.min(window.devicePixelRatio || 1, 1.5);
+    var W = 0, H = 0, stars = [], running = false, raf = null;
+    var par = {x:0, y:0, tx:0, ty:0};
+
+    // Кэш-спрайт свечения (вместо дорогого shadowBlur)
+    var glow = document.createElement("canvas");
+    glow.width = glow.height = 64;
+    var gc = glow.getContext("2d");
+    var grad = gc.createRadialGradient(32,32,0,32,32,32);
+    grad.addColorStop(0,"rgba(255,240,214,.95)");
+    grad.addColorStop(.3,"rgba(255,217,160,.5)");
+    grad.addColorStop(1,"rgba(255,217,160,0)");
+    gc.fillStyle = grad;
+    gc.fillRect(0,0,64,64);
+
+    // Большая Медведица, как на классических атласах: ковш справа вверху,
+    // ручка уходит влево-вниз. Локальный бокс: x 0.03-0.97, y 0.20-0.90.
+    var DIPPER = [
+      [0.03,0.75],[0.22,0.58],[0.42,0.62],[0.60,0.50],  // ручка: Алкайд, Мицар, Алиот, Мегрец
+      [0.97,0.20],[0.97,0.55],[0.68,0.90]               // ковш: Дубхе, Мерак, Фекда
+    ];
+    var DIPPER_LINES = [[3,4],[4,5],[5,6],[6,3],[3,2],[2,1],[1,0]];
+    var dipper = [];
+
+    function build(){
+      var rect = canvas.getBoundingClientRect();
+      W = Math.max(1, rect.width); H = Math.max(1, rect.height);
+      canvas.width = Math.round(W * DPR);
+      canvas.height = Math.round(H * DPR);
+      ctx.setTransform(DPR,0,0,DPR,0,0);
+
+      var n = Math.round(Math.min(110, Math.max(45, W * H / 16000)));
+      if (W < 760) n = Math.round(n / 2);
+      stars = [];
+      for (var i = 0; i < n; i++){
+        stars.push({
+          x: Math.random(), y: Math.random() * 0.82,      // небо — верхняя часть кадра
+          r: 0.5 + Math.random() * 0.9,
+          base: 0.25 + Math.random() * 0.45,
+          amp: 0.12 + Math.random() * 0.22,
+          spd: 0.4 + Math.random() * 1.1,
+          ph: Math.random() * 6.283,
+          warm: Math.random() < 0.75
+        });
+      }
+
+      // Медведица — в открытом куске неба справа вверху; на мобильных компактнее, у верхнего края
+      var small = W < 760;
+      var ox, oy, bw, bh;
+      if (small){
+        bw = W * 0.62; bh = Math.min(H * 0.26, bw / 1.34);
+        ox = W - bw - W * 0.05;
+        oy = H * 0.09;
+      } else {
+        bw = W * 0.34; bh = Math.min(H * 0.42, bw / 1.34);
+        ox = W - bw - W * 0.035;
+        oy = H * 0.05;
+      }
+      dipper = DIPPER.map(function(p, i){
+        return {
+          x: ox + (p[0] - 0.03) / 0.94 * bw,
+          y: oy + (p[1] - 0.20) / 0.70 * bh,
+          r: 2.1 + (i === 3 ? -0.4 : 0.3),   // Мегрец (угол ковша) чуть тусклее остальных
+          ph: i * 1.3
+        };
+      });
+    }
+
+    function drawStar(s, x, y, a, core, flare){
+      ctx.globalAlpha = a;
+      var d = s.r * 7;
+      ctx.drawImage(glow, x - d, y - d, d * 2, d * 2);
+      if (flare){
+        var l = s.r * 5;
+        ctx.globalAlpha = a * 0.55;
+        ctx.strokeStyle = core;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(x - l, y); ctx.lineTo(x + l, y);
+        ctx.moveTo(x, y - l); ctx.lineTo(x, y + l);
+        ctx.moveTo(x - l * .55, y - l * .55); ctx.lineTo(x + l * .55, y + l * .55);
+        ctx.moveTo(x - l * .55, y + l * .55); ctx.lineTo(x + l * .55, y - l * .55);
+        ctx.stroke();
+      }
+      ctx.globalAlpha = Math.min(1, a * 1.4);
+      ctx.fillStyle = core || "#FFF8EC";
+      ctx.beginPath();
+      ctx.arc(x, y, s.r, 0, 6.283);
+      ctx.fill();
+    }
+
+    function paint(t){
+      ctx.clearRect(0,0,W,H);
+      var dx = Math.sin(t * 0.045) * 6 + par.x;
+      var dy = Math.cos(t * 0.035) * 3 + par.y;
+
+      for (var i = 0; i < stars.length; i++){
+        var s = stars[i];
+        var a = s.base + s.amp * Math.sin(t * s.spd + s.ph);
+        if (a <= 0.02) continue;
+        drawStar(s, s.x * W + dx * (0.4 + s.r * 0.4), s.y * H + dy * 0.6, a);
+      }
+
+      // линии созвездия: толще, но с затуханием к середине каждого отрезка
+      ctx.lineWidth = 2.2;
+      ctx.lineCap = "round";
+      for (var j = 0; j < DIPPER_LINES.length; j++){
+        var p1 = dipper[DIPPER_LINES[j][0]], p2 = dipper[DIPPER_LINES[j][1]];
+        var gg = ctx.createLinearGradient(p1.x + dx, p1.y + dy, p2.x + dx, p2.y + dy);
+        var edge = 0.60 + 0.08 * Math.sin(t * 0.5 + j);
+        gg.addColorStop(0, "rgba(214,168,116," + edge.toFixed(3) + ")");
+        gg.addColorStop(0.5, "rgba(214,168,116,0.22)");
+        gg.addColorStop(1, "rgba(214,168,116," + edge.toFixed(3) + ")");
+        ctx.strokeStyle = gg;
+        ctx.beginPath();
+        ctx.moveTo(p1.x + dx, p1.y + dy);
+        ctx.lineTo(p2.x + dx, p2.y + dy);
+        ctx.stroke();
+      }
+
+      for (var k = 0; k < dipper.length; k++){
+        var d2 = dipper[k];
+        drawStar(d2, d2.x + dx, d2.y + dy, 0.85 + 0.15 * Math.sin(t * 0.8 + d2.ph), "#FFF3DC", true);
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    function loop(now){
+      if (!running) return;
+      par.x += (par.tx - par.x) * 0.04;
+      par.y += (par.ty - par.y) * 0.04;
+      paint(now / 1000);
+      raf = requestAnimationFrame(loop);
+    }
+    function start(){
+      if (running || reduce) return;
+      running = true;
+      raf = requestAnimationFrame(loop);
+    }
+    function stop(){
+      running = false;
+      if (raf) cancelAnimationFrame(raf);
+      raf = null;
+    }
+
+    build();
+    if (reduce){
+      paint(2.4);                       // один статичный кадр
+    } else {
+      if (!coarse){
+        canvas.parentElement.addEventListener("mousemove", function(e){
+          var r = canvas.getBoundingClientRect();
+          par.tx = ((e.clientX - r.left) / r.width - 0.5) * 12;
+          par.ty = ((e.clientY - r.top) / r.height - 0.5) * 7;
+        }, {passive:true});
+      }
+      new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ e.isIntersecting ? start() : stop(); });
+      }, {threshold:0.02}).observe(canvas);
+      document.addEventListener("visibilitychange", function(){
+        if (document.hidden) stop();
+        else {
+          var r = canvas.getBoundingClientRect();
+          if (r.bottom > 0 && r.top < window.innerHeight) start();
+        }
+      });
+      var rsz;
+      window.addEventListener("resize", function(){
+        clearTimeout(rsz);
+        rsz = setTimeout(function(){
+          build();
+          if (reduce) paint(2.4);
+        }, 180);
+      });
+      start();
+    }
+  }
 })();

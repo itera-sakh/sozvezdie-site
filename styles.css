@@ -128,6 +128,7 @@ section{padding:74px 0;scroll-margin-top:calc(var(--header-h) + 12px)}
   content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(30,22,16,.42) 0%,rgba(30,22,16,0) 35%,rgba(30,22,16,.12) 60%,rgba(30,22,16,.78) 100%);
 }
+.stars{position:absolute;inset:0;z-index:1;pointer-events:none;width:100%;height:100%}
 .hero-content{position:relative;z-index:2;width:100%;padding-bottom:80px}
 .hero-badge{
   display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:999px;
@@ -164,7 +165,7 @@ section{padding:74px 0;scroll-margin-top:calc(var(--header-h) + 12px)}
 .contact-stars svg{width:14px;height:14px;fill:var(--bronze)}
 .contact-rating-check{color:#2E9E5B;font-weight:700}
 .scroll-hint{
-  position:absolute;right:40px;bottom:36px;z-index:3;display:flex;flex-direction:column;
+  position:absolute;right:104px;bottom:36px;z-index:3;display:flex;flex-direction:column;
   align-items:center;gap:10px;color:rgba(255,255,255,.8);font-size:11px;letter-spacing:.22em;
   text-transform:uppercase;writing-mode:vertical-rl;
 }
@@ -230,6 +231,16 @@ section{padding:74px 0;scroll-margin-top:calc(var(--header-h) + 12px)}
 }
 .price-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
 .price-card.featured{background:linear-gradient(160deg,#4A3A2E,#3A2D23);color:#F5EEE2}
+.price-card.featured::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:
+    radial-gradient(1.5px 1.5px at 18% 22%,rgba(255,217,160,.7),transparent 70%),
+    radial-gradient(1px 1px at 78% 14%,rgba(255,217,160,.55),transparent 70%),
+    radial-gradient(1.2px 1.2px at 88% 42%,rgba(255,217,160,.45),transparent 70%),
+    radial-gradient(1px 1px at 64% 68%,rgba(255,217,160,.4),transparent 70%),
+    radial-gradient(1.4px 1.4px at 30% 84%,rgba(255,217,160,.5),transparent 70%),
+    radial-gradient(1px 1px at 8% 62%,rgba(255,217,160,.4),transparent 70%);
+}
 .price-card.featured h3,.price-card.featured .price-amount{color:#fff}
 .price-card.featured .price-note,.price-card.featured p{color:rgba(245,238,226,.75)}
 .price-tag{
