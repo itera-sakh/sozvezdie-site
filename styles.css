@@ -260,7 +260,7 @@ section{padding:74px 0;scroll-margin-top:calc(var(--header-h) + 12px)}
 .contact-link b{display:block;font-size:16px;color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
 .contact-link small{color:var(--ink-soft);font-size:13.5px;font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;letter-spacing:0}
 .map-card{border-radius:28px;overflow:hidden;box-shadow:var(--shadow-lg);position:relative}
-.map-card img{width:100%;height:300px;object-fit:cover}
+.map-frame{display:block;width:100%;height:420px;border:0}
 .map-body{background:var(--surface);padding:30px}
 .map-body h3{font-size:21px;margin-bottom:6px}
 .map-body p{color:var(--ink-soft);font-size:14.5px;margin-bottom:20px}
