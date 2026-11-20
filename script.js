@@ -135,9 +135,9 @@
         stars.push({
           x: Math.random(), y: Math.random() * 0.82,      // небо — верхняя часть кадра
           r: 0.5 + Math.random() * 0.9,
-          base: 0.25 + Math.random() * 0.45,
-          amp: 0.12 + Math.random() * 0.22,
-          spd: 0.4 + Math.random() * 1.1,
+          base: 0.15 + Math.random() * 0.35,
+          amp: 0.30 + Math.random() * 0.35,               // заметное, но не стробоскопическое мерцание
+          spd: 0.35 + Math.random() * 1.6,                // каждая звезда — свой ритм
           ph: Math.random() * 6.283,
           warm: Math.random() < 0.75
         });
@@ -160,7 +160,8 @@
           x: ox + (p[0] - 0.06) / 0.85 * bw,
           y: oy + (p[1] - 0.27) / 0.46 * bh,
           r: 2.1 + (i === 3 ? -0.4 : 0.3),   // Мегрец (угол ковша) чуть тусклее остальных
-          ph: i * 1.3
+          ph: i * 1.3,
+          spd: 0.45 + (i % 4) * 0.25         // у каждой звезды созвездия свой ритм
         };
       });
     }
@@ -219,7 +220,7 @@
 
       for (var k = 0; k < dipper.length; k++){
         var d2 = dipper[k];
-        drawStar(d2, d2.x + dx, d2.y + dy, 0.85 + 0.15 * Math.sin(t * 0.8 + d2.ph), "#FFF3DC", true);
+        drawStar(d2, d2.x + dx, d2.y + dy, 0.8 + 0.2 * Math.sin(t * d2.spd + d2.ph), "#FFF3DC", true);
       }
       ctx.globalAlpha = 1;
     }
